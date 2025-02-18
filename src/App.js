@@ -8,11 +8,19 @@ import ProductDetailPage from './pages/ProductDetailPage';
 const App = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/products" element={<ProductsPage />} />
-        <Route path="/product/:id" element={<ProductDetailPage />} />
-      </Routes>
+      {/* Estilos globais aplicados ao layout principal */}
+      <div style={{
+        backgroundColor: 'var(--background-color)',
+        color: 'var(--text-color)',
+        minHeight: '100vh',
+        fontFamily: 'Arial, sans-serif',
+      }}>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/product/:id" element={<ProductDetailPage />} />
+        </Routes>
+      </div>
     </Router>
   );
 };

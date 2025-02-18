@@ -1,0 +1,31 @@
+/* src/global.css */
+:root {
+    /* Cores principais */
+    --primary-color: #2C3E50;       /* Azul Marinho */
+    --secondary-color: #FF6B6B;    /* Laranja Vibrante */
+    --success-color: #4CAF50;      /* Verde Suave */
+    --background-color: #FFFFFF;   /* Branco */
+    --light-gray: #F4F4F4;         /* Cinza Claro */
+    --accent-yellow: #FFD166;      /* Amarelo Claro */
+    --accent-pink: #FF6B6B;        /* Rosa Suave */
+    --text-color: #000000;         /* Preto */
+  }
+  
+  /* Estilos globais */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  /* Outros estilos globais, se necessário */
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
