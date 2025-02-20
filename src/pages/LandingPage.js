@@ -6,9 +6,9 @@ import ProductCard from '../components/ProductCard'; // Caminho relativo
 const LandingPage = () => {
   const featuredProduct = {
     id: 1,
-    name: 'Console PlayStation 5',
-    price: 'R$ 3.899,90',
-    image: 'https://m.media-amazon.com/images/I/41bsdF9lMPL._AC_UF1000,1000_QL80_.jpg',
+    name: 'Controle sem fio DualSense Midnight Black',
+    price: '398,97',
+    image: 'https://m.media-amazon.com/images/I/61WRPyQAIIL._AC_SX679_.jpg',
   };
 
   return (
