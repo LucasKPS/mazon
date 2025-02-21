@@ -146,27 +146,57 @@
   
   /* Imagem do Produto */
   .product-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    border-radius: 10px 10px 0 0;
+    width: 100%; /* Ocupa toda a largura do container */
+    max-width: 100%; /* Garante que a imagem nunca ultrapasse a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: contain; /* Faz com que a imagem se ajuste dentro do container sem cortar */
+    border-radius: 10px 10px 0 0; /* Arredonda os cantos superiores */
+    display: block; /* Garante que a imagem seja tratada como um bloco (eliminando margens indesejadas) */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
   }
   
-  /* Detalhes do Produto */
-  .product-details {
-    padding: 15px;
-    text-align: center;
-  }
-  
-  .product-details h2 {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    color: #2F2F2F;
-  }
-  
-  .product-details p {
-    font-size: 1rem;
-    color: #4ECDC4;
-    font-weight: bold;
-  }
-  /* Estilos do Navbar */
+ /* Estilos gerais da página de detalhes do produto */
+.product-detail-page {
+  display: flex;
+  flex-direction: column; /* Organiza os itens em uma coluna */
+  justify-content: flex-start; /* Garante que o conteúdo comece abaixo do Navbar */
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+  padding: 20px; /* Padding para adicionar espaçamento */
+  text-align: center; /* Centraliza o texto */
+  margin-top: 60px; /* Espaço para o Navbar (ajustar conforme a altura do Navbar) */
+}
+
+.product-detail-page img {
+  width: 100%; /* A imagem ocupa 100% da largura do container */
+  max-width: 600px; /* Limita a largura máxima da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: contain; /* Ajusta a imagem sem cortá-la */
+  display: block; /* Remove margens extras */
+  margin: 20px 0; /* Adiciona espaçamento ao redor da imagem */
+}
+
+.product-detail-page .product-details {
+  width: 100%;
+  max-width: 600px; /* Limita a largura do conteúdo */
+  padding: 20px; /* Adiciona espaçamento ao redor dos detalhes */
+}
+
+.product-detail-page .product-details h1 {
+  font-size: 2rem;
+  color: #2F2F2F;
+  margin-bottom: 10px;
+}
+
+.product-detail-page .product-details p {
+  font-size: 1.2rem;
+  color: #4ECDC4;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product-detail-page .product-details strong {
+  font-weight: bold;
+  color: #2F2F2F;
+}
+

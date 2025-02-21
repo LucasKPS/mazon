@@ -1,5 +1,7 @@
+// src/pages/ProductDetailPage.js
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Navbar from '../components/Navbar'; // Importe o Navbar
 
 const ProductDetailPage = () => {
   const { id } = useParams(); // Captura o ID do produto da URL
@@ -22,11 +24,17 @@ const ProductDetailPage = () => {
   }
 
   return (
-    <div className="product-detail">
-      <h1>{product.name}</h1>
-      <img src={product.image} alt={product.name} />
-      <p><strong>Descrição:</strong> {product.description}</p>
-      <p><strong>Preço:</strong> {product.price}</p>
+    <div>
+      <Navbar /> {/* Navbar incluído no topo */}
+
+      <div className="product-detail-page">
+        <div className="product-details">
+          <h1>{product.name}</h1>
+          <img src={product.image} alt={product.name} />
+          <p><strong>Descrição:</strong> {product.description}</p>
+          <p><strong>Preço:</strong> {product.price}</p>
+        </div>
+      </div>
     </div>
   );
 };
