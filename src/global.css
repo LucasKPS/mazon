@@ -1,161 +1,187 @@
 /* src/global.css */
 :root {
-    /* Cores principais */
-    --primary-color: #2C3E50;       /* Azul Marinho */
-    --secondary-color: #FF6B6B;    /* Laranja Vibrante */
-    --success-color: #4CAF50;      /* Verde Suave */
-    --background-color: #FFFFFF;   /* Branco */
-    --light-gray: #F4F4F4;         /* Cinza Claro */
-    --accent-yellow: #FFD166;      /* Amarelo Claro */
-    --accent-pink: #FF6B6B;        /* Rosa Suave */
-    --text-color: #000000;         /* Preto */
-  }
-  
-  /* Estilos globais */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-  }
-  .landing-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 2rem;
-    text-align: center;
-    background-color: #FFFFFF;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Título da Landing Page */
-  .landing-page h1 {
-    font-size: 2.5rem;
-    color: #FF6B6B;
-    margin-bottom: 1rem;
-  }
-  
-  /* Subtítulo ou descrição */
-  .landing-page p {
-    font-size: 1.2rem;
-    color: #4ECDC4;
-    margin-bottom: 2rem;
-  }
-  
-  /* Card do Produto em Destaque */
-  .featured-product {
-    background-color: #FFFFFF;
-    border: 1px solid #D9D9D9;
-    border-radius: 10px;
-    padding: 1.5rem;
-    max-width: 1px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .featured-product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .featured-product img {
-    width: 100%; /* Ocupa 100% da largura do container */
-    height: 200px; /* Altura fixa para o container da imagem */
-    object-fit: contain; /* Garante que a imagem seja exibida completa */
-    border-radius: 10px;
-    margin-bottom: 1rem;
-  }
-  
-  .featured-product h2 {
-    font-size: 1.5rem;
-    color: #2F2F2F;
-    margin-bottom: 0.5rem;
-  }
-  
-  .featured-product p {
-    font-size: 1.2rem;
-    color: #4ECDC4;
-    font-weight: bold;
-  }
-  
-  /* Botão "Ver mais produtos" */
-  .landing-page button {
-    background-color: #FF6B6B;
-    color: #FFFFFF;
-    font-size: 1rem;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 2rem;
-  }
-  
-  .landing-page button:hover {
-    background-color: #E55A5A;
-  }
-  
-  
-  /* Outros estilos globais, se necessário */
-  a {
-    color: var(--primary-color);
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  .products-page {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Título da página */
-  .products-page {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Lista de Produtos */
-  .products-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 0 20px;
-  }
-  
-  /* Estilo do Card de Produto */
-  .product-card {
-    background-color: #FFFFFF;
-    border: 1px solid #D9D9D9;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Imagem do Produto */
-  .product-card img {
-    width: 100%; /* Ocupa toda a largura do container */
-    max-width: 100%; /* Garante que a imagem nunca ultrapasse a largura do container */
-    height: auto; /* Mantém a proporção da imagem */
-    object-fit: contain; /* Faz com que a imagem se ajuste dentro do container sem cortar */
-    border-radius: 10px 10px 0 0; /* Arredonda os cantos superiores */
-    display: block; /* Garante que a imagem seja tratada como um bloco (eliminando margens indesejadas) */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
-  }
-  
- /* Estilos gerais da página de detalhes do produto */
+  /* Cores principais */
+  --primary-color: #2C3E50;       /* Azul Marinho */
+  --secondary-color: #FF6B6B;    /* Laranja Vibrante */
+  --success-color: #4CAF50;      /* Verde Suave */
+  --background-color: #FFFFFF;   /* Branco */
+  --light-gray: #F4F4F4;         /* Cinza Claro */
+  --accent-yellow: #FFD166;      /* Amarelo Claro */
+  --accent-pink: #FF6B6B;        /* Rosa Suave */
+  --text-color: #000000;         /* Preto */
+}
+
+/* Estilos globais */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+display: flex;
+justify-content: space-between; /* Alinha o título e a nav com espaçamento */
+align-items: center; /* Alinha os itens do navbar verticalmente */
+padding: 20px;
+background-color: var(--primary-color); /* Cor de fundo do navbar */
+color: #fff; /* Cor do texto no navbar */
+}
+
+.navbar h1 {
+margin: 0;
+font-size: 1.8rem;
+}
+
+nav {
+display: flex; /* Exibe os links de navegação como itens flexíveis */
+gap: 30px; /* Adiciona o espaçamento de 30px entre os links */
+}
+
+.nav-link {
+text-decoration: none; /* Remove o sublinhado dos links */
+color: #fff; /* Cor do texto dos links */
+font-size: 1.2rem; /* Tamanho do texto dos links */
+font-weight: bold; /* Tamanho em negrito para destaque */
+transition: color 0.3s; /* Transição suave para a cor */
+}
+
+.nav-link:hover {
+color: #FF6B6B; /* Cor do link ao passar o mouse */
+}
+
+/* Estilos da Landing Page */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título da Landing Page */
+.landing-page h1 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+/* Subtítulo ou descrição */
+.landing-page p {
+  font-size: 1.2rem;
+  color: #4ECDC4;
+  margin-bottom: 2rem;
+}
+
+/* Card do Produto em Destaque */
+.featured-product {
+  background-color: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.featured-product img {
+  width: 100%; /* Ocupa 100% da largura do container */
+  height: 200px; /* Altura fixa para o container da imagem */
+  object-fit: contain; /* Garante que a imagem seja exibida completa */
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.featured-product h2 {
+  font-size: 1.5rem;
+  color: #2F2F2F;
+  margin-bottom: 0.5rem;
+}
+
+.featured-product p {
+  font-size: 1.2rem;
+  color: #4ECDC4;
+  font-weight: bold;
+}
+
+/* Botão "Ver mais produtos" */
+.landing-page button {
+  background-color: var(--secondary-color);
+  color: #FFFFFF;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.landing-page button:hover {
+  background-color: #E55A5A;
+}
+
+/* Outros estilos globais, se necessário */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Página de Produtos */
+.products-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* Estilo do Card de Produto */
+.product-card {
+  background-color: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%; /* Ocupa toda a largura do container */
+  max-width: 100%; /* Garante que a imagem nunca ultrapasse a largura do container */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: contain; /* Faz com que a imagem se ajuste dentro do container sem cortar */
+  border-radius: 10px 10px 0 0; /* Arredonda os cantos superiores */
+  display: block; /* Garante que a imagem seja tratada como um bloco (eliminando margens indesejadas) */
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+/* Estilos da página de detalhes do produto */
 .product-detail-page {
   display: flex;
   flex-direction: column; /* Organiza os itens em uma coluna */
@@ -199,4 +225,3 @@
   font-weight: bold;
   color: #2F2F2F;
 }
-
