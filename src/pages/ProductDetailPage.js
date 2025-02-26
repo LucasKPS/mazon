@@ -1,13 +1,12 @@
-// src/pages/ProductDetailPage.js
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Navbar from '../components/Navbar'; // Importe o Navbar
+import Navbar from '../components/Navbar';
+import '../global.css'; // Importação do CSS global
 
 const ProductDetailPage = () => {
-  const { id } = useParams(); // Captura o ID do produto da URL
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
 
-  // Simula a busca dos detalhes do produto (substitua por uma API real)
   useEffect(() => {
     const products = [
       { id: 1, name: 'Controle sem fio DualSense Midnight Black', price: 'R$ 398,97', image: 'https://m.media-amazon.com/images/I/61WRPyQAIIL._AC_SX679_.jpg', description: 'Controle sem fio para PlayStation 5 com design elegante e confortável.' },
@@ -25,14 +24,27 @@ const ProductDetailPage = () => {
 
   return (
     <div>
-      <Navbar /> {/* Navbar incluído no topo */}
+      <Navbar />
 
       <div className="product-detail-page">
         <div className="product-details">
           <h1>{product.name}</h1>
-          <img src={product.image} alt={product.name} />
-          <p><strong>Descrição:</strong> {product.description}</p>
-          <p><strong>Preço:</strong> {product.price}</p>
+
+          <div className="image-container">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="product-image"
+            />
+          </div>
+
+          <div className="description-container">
+            <p><strong>Descrição:</strong> {product.description}</p>
+          </div>
+
+          <div className="price-container">
+            <p><strong>Preço:</strong> {product.price}</p>
+          </div>
         </div>
       </div>
     </div>
