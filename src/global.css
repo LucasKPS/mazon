@@ -11,10 +11,15 @@
   --text-color: #000000;         /* Preto */
 }
 
-/* Estilos globais */
-body {
+/* Reset global */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* Estilos globais */
+body {
   font-family: Arial, sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
@@ -23,33 +28,32 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between; /* Alinha o título e a nav com espaçamento */
-  align-items: center; /* Alinha os itens do navbar verticalmente */
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
-  background-color: var(--primary-color); /* Cor de fundo do navbar */
-  color: #fff; /* Cor do texto no navbar */
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 .navbar h1 {
-  margin: 0;
   font-size: 1.8rem;
 }
 
 nav {
-  display: flex; /* Exibe os links de navegação como itens flexíveis */
-  gap: 30px; /* Adiciona o espaçamento de 30px entre os links */
+  display: flex;
+  gap: 30px;
 }
 
 .nav-link {
-  text-decoration: none; /* Remove o sublinhado dos links */
-  color: #fff; /* Cor do texto dos links */
-  font-size: 1.2rem; /* Tamanho do texto dos links */
-  font-weight: bold; /* Tamanho em negrito para destaque */
-  transition: color 0.3s; /* Transição suave para a cor */
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 .nav-link:hover {
-  color: #FF6B6B; /* Cor do link ao passar o mouse */
+  color: var(--secondary-color);
 }
 
 /* Estilos da Landing Page */
@@ -61,31 +65,29 @@ nav {
   min-height: 100vh;
   padding: 2rem;
   text-align: center;
-  background-color: #FFFFFF;
+  background-color: var(--background-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Título da Landing Page */
 .landing-page h1 {
   font-size: 2.5rem;
   color: var(--secondary-color);
   margin-bottom: 1rem;
 }
 
-/* Subtítulo ou descrição */
 .landing-page p {
   font-size: 1.2rem;
-  color: #4ECDC4;
+  color: var(--primary-color);
   margin-bottom: 2rem;
 }
 
 /* Card do Produto em Destaque */
 .featured-product {
-  background-color: #FFFFFF;
+  background-color: var(--background-color);
   border: 1px solid #D9D9D9;
   border-radius: 10px;
   padding: 1.5rem;
-  max-width: 1px;
+  max-width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -96,22 +98,22 @@ nav {
 }
 
 .featured-product img {
-  width: 100%; /* Ocupa 100% da largura do container */
-  height: 200px; /* Altura fixa para o container da imagem */
-  object-fit: contain; /* Garante que a imagem seja exibida completa */
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
 
 .featured-product h2 {
   font-size: 1.5rem;
-  color: #2F2F2F;
+  color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
 
 .featured-product p {
   font-size: 1.2rem;
-  color: #4ECDC4;
+  color: var(--secondary-color);
   font-weight: bold;
 }
 
@@ -132,7 +134,7 @@ nav {
   background-color: #E55A5A;
 }
 
-/* Outros estilos globais, se necessário */
+/* Outros estilos globais */
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -153,12 +155,12 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 0 20px;
+  padding: 0;
 }
 
 /* Estilo do Card de Produto */
 .product-card {
-  background-color: #FFFFFF;
+  background-color: var(--background-color);
   border: 1px solid #D9D9D9;
   border-radius: 10px;
   overflow: hidden;
@@ -172,59 +174,58 @@ a:hover {
 }
 
 .product-card img {
-  width: 100%; /* Ocupa toda a largura do container */
-  max-width: 100%; /* Garante que a imagem nunca ultrapasse a largura do container */
-  height: auto; /* Mantém a proporção da imagem */
-  object-fit: contain; /* Faz com que a imagem se ajuste dentro do container sem cortar */
-  border-radius: 10px 10px 0 0; /* Arredonda os cantos superiores */
-  display: block; /* Garante que a imagem seja tratada como um bloco (eliminando margens indesejadas) */
-  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px 10px 0 0;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Estilos da página de detalhes do produto */
 .product-detail-page {
   display: flex;
-  flex-direction: column; /* Organiza os itens em uma coluna */
-  justify-content: flex-start; /* Garante que o conteúdo comece abaixo do Navbar */
-  align-items: center; /* Centraliza o conteúdo horizontalmente */
-  min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
-  padding: 20px; /* Padding para adicionar espaçamento */
-  text-align: center; /* Centraliza o texto */
-  margin-top: 60px; /* Espaço para o Navbar (ajustar conforme a altura do Navbar) */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+  margin-top: 60px;
 }
 
-/* Estilo da imagem do produto com moldura azul */
 .product-detail-page .product-image {
-  border: 5px solid var(--primary-color); /* Moldura azul usando a cor primária */
-  padding: 10px; /* Espaçamento interno */
-  background-color: var(--background-color); /* Fundo branco */
-  border-radius: 10px; /* Bordas arredondadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  max-width: 100%; /* Garante que a imagem não ultrapasse o container */
-  height: auto; /* Mantém a proporção da imagem */
-  margin: 20px 0; /* Espaçamento ao redor da imagem */
+  border: 5px solid var(--primary-color);
+  padding: 10px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
 }
 
 .product-detail-page .product-details {
   width: 100%;
-  max-width: 600px; /* Limita a largura do conteúdo */
-  padding: 20px; /* Adiciona espaçamento ao redor dos detalhes */
+  max-width: 600px;
+  padding: 20px;
 }
 
 .product-detail-page .product-details h1 {
   font-size: 2rem;
-  color: #2F2F2F;
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 
 .product-detail-page .product-details p {
   font-size: 1.2rem;
-  color: #4ECDC4;
+  color: var(--secondary-color);
   font-weight: bold;
   margin: 10px 0;
 }
 
 .product-detail-page .product-details strong {
   font-weight: bold;
-  color: #2F2F2F;
+  color: var(--primary-color);
 }
