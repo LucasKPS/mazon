@@ -27,23 +27,25 @@ const ProductDetailPage = () => {
       <Navbar />
 
       <div className="product-detail-page">
-        <div className="product-details">
-          <h1>{product.name}</h1>
+        <div className="product-details-container">
+          <div className="product-details-content">
+            <h1>{product.name}</h1>
 
-          <div className="image-container">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="product-image"
-            />
-          </div>
+            <div className="image-container">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="product-image"
+              />
+            </div>
 
-          <div className="description-container">
-            <p><strong>Descrição:</strong> {product.description}</p>
-          </div>
+            <div className="description-container">
+              <p><strong>Descrição:</strong> {product.description}</p>
+            </div>
 
-          <div className="price-container">
-            <p><strong>Preço:</strong> {product.price}</p>
+            <div className="price-container">
+              <p><strong>Preço:</strong> {product.price}</p>
+            </div>
           </div>
         </div>
       </div>
