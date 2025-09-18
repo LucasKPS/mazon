@@ -1,6 +1,5 @@
 import React from 'react';
 import ProductCard from '../components/ProductCard';
-import Navbar from '../components/Navbar';
 
 const ProductsPage = () => {
   const products = [
@@ -10,17 +9,14 @@ const ProductsPage = () => {
   ];
 
   return (
-    <div>
-      <Navbar />
-      <div className="products-page">
-        <div className="products-container">
-          <div className="products-list">
-            {products.map((product) => (
-              <div className="product-card-wrapper" key={product.id}>
-                <ProductCard product={product} />
-              </div>
-            ))}
-          </div>
+    <div className="products-page">
+      <div className="products-container">
+        <div className="products-list">
+          {products.map((product) => (
+            <div className="product-card-wrapper" key={product.id}>
+              <ProductCard product={product} />
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import '../global.css'; // Importação do CSS global
+import '../global.css';
 
 const ProductDetailPage = () => {
   const { id } = useParams();
@@ -23,29 +22,22 @@ const ProductDetailPage = () => {
   }
 
   return (
-    <div>
-      <Navbar />
-
-      <div className="product-detail-page">
-        <div className="product-details-container">
-          <div className="product-details-content">
-            <h1>{product.name}</h1>
-
-            <div className="image-container">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="product-image"
-              />
-            </div>
-
-            <div className="description-container">
-              <p><strong>Descrição:</strong> {product.description}</p>
-            </div>
-
-            <div className="price-container">
-              <p><strong>Preço:</strong> {product.price}</p>
-            </div>
+    <div className="product-detail-page">
+      <div className="product-details-container">
+        <div className="product-details-content">
+          <h1>{product.name}</h1>
+          <div className="image-container">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="product-image"
+            />
+          </div>
+          <div className="description-container">
+            <p><strong>Descrição:</strong> {product.description}</p>
+          </div>
+          <div className="price-container">
+            <p><strong>Preço:</strong> {product.price}</p>
           </div>
         </div>
       </div>
